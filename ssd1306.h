@@ -16,14 +16,15 @@
 
 #if defined(STM32WB) //we use the NUCLEO-WB55RG board
 #include "stm32wbxx_hal.h"
+#include "stm32wbxx_hal_i2c.h"
 #else
 #endif
 
 #ifndef SSD1306_I2C_ADDR
-#define SSD1306_I2C_ADDR        (0x3C << 1) //Either “0111100” or “0111101”, 
-                                            //can be selected as the slave address 
-                                            //of SSD1306. sec. 8.1.5 pg 19
-                                            //Shifted for 7-bit addr
+#define SSD1306_I2C_ADDR        (0x3C << 1)     //Either “0111100” or “0111101”, 
+                                                //can be selected as the slave address 
+                                                //of SSD1306. sec. 8.1.5 pg 19
+                                                //Shifted for 7-bit addr
 #endif
 
 #ifndef SSD1306_I2C_PORT

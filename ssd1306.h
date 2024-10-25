@@ -31,4 +31,34 @@
 #endif
 
 
+/***********************************************COMMANDS***************************************************/
+/******************************************************************************************************** */
+
+//Command tables are from pg 28-32
+
+/***********Fundamental Command Table***********/
+#define SET_CONTRAST_CONTROL    0x81
+#define ENTIRE_DISPLAY_ON       0xA5
+#define SET_NORMAL_DISPLAY      0xA6
+#define SET_INVERSE_DISPLAY     0xA7
+#define SET_DISPLAY_ON          0xAF
+#define SET_DISPLAY_OFF         0xAE
+
+/***********Scrolling Command Table*************/
+
+//TODO
+
+
+/**********Addressing Setting Command Table**********/
+
+//TODO
+
+/********Hardware Configuration (Panel resolution & layout related) Command Table**********/
+
+//TODO
+
+/************Timing & Driving Scheme Setting Command Table************/
+
+//TODO
+
 #endif // __SSD1306_H__

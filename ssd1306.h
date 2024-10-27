@@ -59,6 +59,11 @@
 //TODO
 
 /************Timing & Driving Scheme Setting Command Table************/
+#define SET_DISPLAY_CLOCK_DIVIDE_RATIO    0xD5
+#define OSCILLATOR_FREQUENCY              0xD5
+#define SET_PRE_CHARGE_PERIOD             0XD9
+#define SET_VCOMH_DESELECT_LEVEL          0xDB
+#define NOP                               0xE3           
 
 //TODO
 

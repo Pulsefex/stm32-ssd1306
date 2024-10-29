@@ -66,18 +66,29 @@
 #define SET_DISPLAY_OFF         0xAE
 
 /***********Scrolling Command Table*************/
-
-//TODO
-
+#define SET_RIGHT_HORZONTAL_SCROLL               0x26
+#define SET_LEFT_HORZONTAL_SCROLL                0x27
+#define SET_VERTICAL_AND_RIGHT_HORIZONTAL_SCROLL 0x29
+#define SET_VERTICAL_AND_LEFT_HORIZONTAL_SCROLL  0x2A
+#define DEACTIVATE_SCROLL                        0x2E
+#define ACTIVATE_SCROLL                          0x2F
+#define SET_VERTICAL_SCROLL_AREA                 0xA3
 
 /**********Addressing Setting Command Table**********/
-
-//TODO
+#define SET_LOW_COLUMN       0x00
+#define SET_HIGH_COLUMN      0x10
+#define SET_MEMORY_MODE      0x20
+#define SET_COLUMN_ADDR      0x21
+#define SET_PAGE_ADDR        0x22
 
 /********Hardware Configuration (Panel resolution & layout related) Command Table**********/
-
-//TODO
-
+#define SET_START_LINE            0x40
+#define SET_SEGMENT_REMAP         0xA1
+#define SET_MUX_RATIO             0xA8
+#define SET_COM_SCAN_DIR_INC      0xC0
+#define SET_COM_SCAN_DIR_DEC      0xC8
+#define SET_DISPLAY_OFFSET        0xD3
+#define SET_COM_PINS              0xDA
 
 /************Timing & Driving Scheme Setting Command Table************/
 #define SET_DISPLAY_CLOCK_DIVIDE_RATIO    0xD5

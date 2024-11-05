@@ -60,26 +60,28 @@ void ssd1306_Init(void) {
 
     HAL_Delay(100);
 
+    //init sequence from https://cdn-shop.adafruit.com/datasheets/SSD1306.pdf, modified according to convention
     ssd1306_WriteCommand(SET_DISPLAY_OFF);
-    ssd1306_WriteCommand(/*TODO*/);
-    ssd1306_WriteCommand(/*TODO*/);
-    ssd1306_WriteCommand(/*TODO*/);
+    ssd1306_WriteCommand(SET_MUX_RATIO);
+    ssd1306_WriteCommand(0x3F);
+    ssd1306_WriteCommand(SET_DISPLAY_OFFSET);
+    ssd1306_WriteCommand(0x00);
+    ssd1306_WriteCommand(SET_START_LINE);
+    ssd1306_WriteCommand(SET_SEGMENT_REMAP);
+    ssd1306_WriteCommand(SET_COM_SCAN_DIR_DEC);
+    ssd1306_WriteCommand(SET_COM_PINS);
+    ssd1306_WriteCommand(0x12); //gpt says this should be 0x12 EDIT; fixed
     ssd1306_WriteCommand(SET_CONTRAST_CONTROL);
     ssd1306_WriteCommand(0xFF);
-    ssd1306_WriteCommand(/*TODO*/);
-    ssd1306_WriteCommand(/*TODO*/);
     ssd1306_WriteCommand(SET_NORMAL_DISPLAY);
-    ssd1306_WriteCommand(/*TODO*/);
-    ssd1306_WriteCommand(/*TODO*/);
-    ssd1306_WriteCommand(/*TODO*/);
-    ssd1306_WriteCommand(/*TODO*/);
     ssd1306_WriteCommand(SET_DISPLAY_CLOCK_DIVIDE_RATIO);
     ssd1306_WriteCommand(OSCILLATOR_FREQUENCY);
     ssd1306_WriteCommand(SET_PRE_CHARGE_PERIOD);
-    ssd1306_WriteCommand(/*TODO*/);
-    ssd1306_WriteCommand(/*TODO*/);
+    ssd1306_WriteCommand(0xF1);
+    ssd1306_WriteCommand(0x8D); //some shit about charge pumps? idk
+    ssd1306_WriteCommand(0x14);
     ssd1306_WriteCommand(SET_VCOMH_DESELECT_LEVEL);
-    ssd1306_WriteCommand(/*TODO*/);
+    ssd1306_WriteCommand(0x40);
     ssd1306_WriteCommand(ENTIRE_DISPLAY_ON);
     ssd1306_WriteCommand(SET_DISPLAY_ON);
 

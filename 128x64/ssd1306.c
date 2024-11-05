@@ -70,7 +70,7 @@ void ssd1306_Init(void) {
     ssd1306_WriteCommand(SET_SEGMENT_REMAP);
     ssd1306_WriteCommand(SET_COM_SCAN_DIR_DEC);
     ssd1306_WriteCommand(SET_COM_PINS);
-    ssd1306_WriteCommand(0x02); //gpt says this should be 0x12
+    ssd1306_WriteCommand(0x12); //gpt says this should be 0x12 EDIT; fixed
     ssd1306_WriteCommand(SET_CONTRAST_CONTROL);
     ssd1306_WriteCommand(0xFF);
     ssd1306_WriteCommand(SET_NORMAL_DISPLAY);
